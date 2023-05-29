@@ -25,14 +25,14 @@ class Location extends StatelessWidget {
                         text: "${geolocation.name}, ",
                         style: TextStyle(
                           color: Theme.of(context).colorScheme.onPrimary,
-                          fontSize: 25,
+                          fontSize: 20,
                         ),
                         children: [
                       TextSpan(
                           text: "${geolocation.admin1}",
                           style: TextStyle(
                             color: Theme.of(context).colorScheme.onPrimary,
-                            fontSize: 20,
+                            fontSize: 15,
                           )),
                     ]))
               ],

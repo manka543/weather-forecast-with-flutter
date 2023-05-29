@@ -51,6 +51,8 @@ class _SearchPageState extends State<SearchPage>
                 return const SliverToBoxAdapter(child: Center(child: CircularProgressIndicator()));
             case SearchInitial:
               return const SliverToBoxAdapter(child: Center(child: Text("Type some name to search for it")));
+            case SearchNothingFound:
+              return const SliverToBoxAdapter(child: Center(child: Text("Nothing has been found")));
             case SearchError:
             default:
                 return const SliverToBoxAdapter(child: Center(child: Text("An error has occurred the process")));

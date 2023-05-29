@@ -15,8 +15,12 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
       var response = await http.get(url);
       final parsed = jsonDecode(response.body);
       final locations = <Geolocation>[];
-      for (var location in parsed["results"]) {
+      if(parsed["results"] != null){
+        for (var location in parsed["results"]) {
         locations.add(Geolocation.fromJson(location));
+      }
+      } else {
+        emit(const SearchNothingFound());
       }
       emit(SearchValid(locations));
     });

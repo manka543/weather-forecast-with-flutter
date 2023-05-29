@@ -18,6 +18,10 @@ class SearchValid extends SearchState {
   const SearchValid(super.data);
 }
 
+class SearchNothingFound extends SearchState {
+  const SearchNothingFound(): super(null);
+}
+
 class SearchError extends SearchState {
   final String errorCode;
   const SearchError(this.errorCode) : super(null);
